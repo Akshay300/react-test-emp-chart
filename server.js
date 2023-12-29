@@ -98,6 +98,10 @@ const employees = generateOrgTree(
   numJuniorEngineers
 );
 
+app.get("/", (req, res) => {
+  res.send("Hello, this is the root path!");
+});
+
 app.get("/api/employeesdata", (req, res) => {
   res.json(employees);
 });
